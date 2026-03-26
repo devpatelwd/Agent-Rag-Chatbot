@@ -1,0 +1,6 @@
+google-genai
+streamlit
+ddgs
+fpdf2
+chromadb
+pymupdf
