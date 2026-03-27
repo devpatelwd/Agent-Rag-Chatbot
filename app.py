@@ -81,13 +81,6 @@ if st.session_state.processed :
 
     que = st.chat_input("Ask a Question : ")
 
-
-    for message in st.session_state.messages:
-          with st.chat_message(message["role"]):
-                st.write(message["content"])
-    
-
-
     if que:
         with st.spinner("processing...."):
             st.session_state.messages.append({"role" : "user" , "content" : que})
@@ -105,6 +98,10 @@ if st.session_state.processed :
                         file_name="output.pdf"
                   )
 
+    for message in st.session_state.messages:
+          with st.chat_message(message["role"]):
+                st.write(message["content"])
+    
 
 
 
